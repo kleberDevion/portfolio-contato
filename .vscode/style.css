@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url('bg-port.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'inter', sans-serif;
+    overflow-x: hidden;
+    height: 2000px;
+}
+
+/* --- COMEÇO HEADER CONFIG --- */
+
+.topo {
+    background: #054f77;
+    width: 2000px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.abaixo {
+    width: 200px;
+    height: 70px;
+    color: white;
+    position: absolute;
+    transform: translate(107px, 120px);
+}
+
+.div-title {
+    width: 270px;
+    height: 70px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.div-logo {
+    background-image: url('portfolio-logo.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(10px, 15px);
+}
+
+.pai-contato {
+    width: 90px;
+    height: 40px;
+    border: 1px solid transparent;
+    display: flex;
+    transform: translate(1700px, 15px);
+    justify-content: center;
+    align-items: center;
+    position: absolute
+}
+
+.div-contato {
+    width: 70px;
+    height: 40px;
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: ease-out 0.3s;
+}
+
+.div-logo-github {
+    position: absolute;
+    background-image: url('GitHub.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: cover;
+    width: 24px;
+    height: 24px;
+    transform: translate(1790px, 15px);
+}
+
+.div-contato:hover {
+    transform: translateY(-9px);
+}
+
+.div-contato a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* --- FINAL HEADER CONFIG --- */
+
+
+.corpo {
+    width: 2000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 107px;
+    border: 1px solid none;
+    position: absolute;
+    gap: 40px;
+    transform: translateY(400px);
+}
+
+.sub-corp {
+    width: 2000px;
+    height: 200px;
+    border: 1px solid none;
+    transform: translateY(260px);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.card-project-1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px black;
+    background: #054f77;
+}
+
+.card-project-1 h4 {
+    color: white;
+    font-size: smaller;
+    font-family: 'inter', sans-serif;
+    text-align: center;
+}
+
+.card-project {
+    width: 300px;
+    height: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    background-image: url('not-found.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card-project:hover {
+    transform: translateY(-10px);
+    transition: ease-out 0.5s;
+}
+
+.espaco-sobre {
+    width: 2000px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: absolute;
+    transform: translateY(1200px);
+    padding-left: 107px;
+    border: 1px solid none;
+    border-left: none;
+    border-right: none;
+}
+
+.about-content {
+    width: 900px;
+    max-height: 400px;
+    border: 2px solid whitesmoke;
+    border-radius: 12px;
+    background: #054f77;
+    box-shadow: 10px 10px 50px black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.final-pe {
+    width: 2000px;
+    height: 110px;
+    background: #054f77;
+    display: flex;
+    transform: translateY(1909px);
+    box-shadow: 10px 10px 50px black;
+}
