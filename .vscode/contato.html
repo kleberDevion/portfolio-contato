@@ -39,7 +39,7 @@ formulario.addEventListener('submit', async (e) => {
   const dados = new FormData(formulario);
 
   try {
-    const resposta = await fetch("https://formsubmit.co", {
+    const resposta = await fetch("POST https://workspace.klebersantanade.repl.co/api/events", {
       method: "POST",
       body: dados
     });
