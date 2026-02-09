@@ -1,8 +1,89 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: url('');
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(5,79,119,1) 0%, rgba(135,206,250,1) 100%);
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.topic {
+    background: #054f77;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.contact {
+    width: 300px;
+    height: 90px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    flex-direction: row;
+}
+
+.formulario {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(200px);
+}
+
+input {
+    width: 400px;
+    height: 60px;
+    border-radius: 8px;
+    border: 2px solid #054f77;
+    padding-left: 20px;
+    font-size: small;
+    color: black;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    width: 400px;
+    height: 100px;
+    border-radius: 8px;
+    border: 2px solid #054f77;
+    padding: 20px;
+    font-size: small;
+    color: black;
+    outline: none;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background: #054f77;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
 }

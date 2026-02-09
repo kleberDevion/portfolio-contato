@@ -3,18 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre em contato</title>
+    <link rel="stylesheet" href="style-contato.css">
+    <title>Entre em contato/contact</title>
 </head>
 <body>
-    <form action="https://formsubmit.co/kleberdevion@gmail.com" method="POST">
-        <label for="nome">Seu nome</label>
-        <input type="text" name="nome" required>
-        <label for="numero">Seu telefone</label>
-        <input type="number" name="numero" required>
-        <label for="email">Seu email</label>
+
+    <header class="topic">
+        <div class="contact">
+            <h2><strong>KleberDevion.contact</strong></h2>
+        </div>
+    </header>
+
+    <form class="formulario">
+        <label for="nome"><strong>Seu nome</strong></label>
+        <input type="text" name="nome" required> 
+
+        <label for="numero"><strong>Seu telefone</strong></label>
+        <input type="text" inputmode="numeric" name="numero" required>
+
+        <label for="email"><strong>Seu email</strong></label>
         <input type="email" name="email" required>
-        <label for="descricao">Sua menssagem</label>
-        <input type="description" name="descricao" required>
+
+        <label for="descricao"><strong>Sua menssagem</strong></label>
+        <textarea type="description" name="descricao" required></textarea>
+
+        <button type="submit"><strong>Enviar menssagem</strong></button>
     </form> 
+<script>
+    function enviarFormulario() {
+        alert("Formulário enviado com sucesso!");
+    }
+
+const formulario = document.getElementById('meu-form');
+
+formulario.addEventListener('submit', async (e) => {
+  e.preventDefault(); // Impede o redirecionamento
+
+  const dados = new FormData(formulario);
+
+  try {
+    const resposta = await fetch("https://formsubmit.co", {
+      method: "POST",
+      body: dados
+    });
+
+    if (resposta.ok) {
+      alert("Enviado com sucesso sem mudar de página!");
+    } else {
+      alert("Erro ao enviar.");
+    }
+  } catch (erro) {
+    console.error("Erro na requisição:", erro);
+  }
+});
+
+</script>
 </body>
 </html>
