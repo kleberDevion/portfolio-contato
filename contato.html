@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-contato.css">
+    <title>Entre em contato/contact</title>
+</head>
+<body>
+
+    <header class="topic">
+        <div class="contact">
+            <h2><strong>KleberDevion.contact</strong></h2>
+        </div>
+          <button class="open-modal" onclick="abrirModal()"><span>|||</span></button>
+        <div id="modal">
+           <h2>teste...</h2>
+           <button class="close-modal" onclick="fecharModal()"><strong>×</strong></button>
+        </div>
+    </header>
+
+    <form class="formulario">
+        <label for="nome"><strong>Seu nome</strong></label>
+        <input type="text" name="nome" required> 
+
+        <label for="numero"><strong>Seu telefone</strong></label>
+        <input type="text" inputmode="numeric" name="numero" required>
+
+        <label for="email"><strong>Seu email</strong></label>
+        <input type="email" name="email" required>
+
+        <label for="descricao"><strong>Sua menssagem</strong></label>
+        <textarea type="description" name="descricao" required></textarea>
+
+        <button type="submit"><strong>Enviar menssagem</strong></button>
+    </form> 
+    <script>
+        function abrirModal() {
+            document.getElementById('modal').style.display = "block"
+        }
+        function fecharModal() {
+            document.getElementById('modal').style.display = "none"
+        }
+  </script>
+</body>
+</html>
