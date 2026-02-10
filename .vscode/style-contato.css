@@ -87,3 +87,41 @@ button {
     font-size: medium;
     cursor: pointer;
 }
+
+.open-modal {
+    width: 40px;
+    height: 29px;
+    background: transparent;
+    outline: none;
+    border: 0px solid none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    transform: translate(1555px, 30px);
+}
+
+.close-modal {
+    width: 40px;
+    height: 29px;
+    background: transparent;
+    outline: none;
+    border: 0px solid none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    transform: translate(250px, 20px);
+}
+
+.open-modal span {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#modal {
+    position: absolute;
+    display: none;
+    background: #212121;
+    width: 300px;
+    height: 883px;
+    border: 1px solid #bdc1c6;  
+}

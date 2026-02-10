@@ -12,6 +12,11 @@
         <div class="contact">
             <h2><strong>KleberDevion.contact</strong></h2>
         </div>
+          <button class="open-modal" onclick="abrirModal()"><span>|||</span></button>
+        <div id="modal">
+           <h2>teste...</h2>
+           <button class="close-modal" onclick="fecharModal()">×</button>
+        </div>
     </header>
 
     <form class="formulario">
@@ -29,31 +34,13 @@
 
         <button type="submit"><strong>Enviar menssagem</strong></button>
     </form> 
-<script>
-
-const formulario = document.getElementById('meu-form');
-
-formulario.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Impede o redirecionamento
-
-  const dados = new FormData(formulario);
-
-  try {
-    const resposta = await fetch("POST https://workspace.klebersantanade.repl.co/api/events", {
-      method: "POST",
-      body: dados
-    });
-
-    if (resposta.ok) {
-      alert("Enviado com sucesso sem mudar de página!");
-    } else {
-      alert("Erro ao enviar.");
-    }
-  } catch (erro) {
-    console.error("Erro na requisição:", erro);
-  }
-});
-
-</script>
+    <script>
+        function abrirModal() {
+            document.getElementById('modal').style.display = "block"
+        }
+        function fecharModal() {
+            document.getElementById('modal').style.display = "none"
+        }
+  </script>
 </body>
 </html>
