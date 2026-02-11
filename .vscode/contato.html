@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="style-contato.css">
     <title>Entre em contato/contact</title>
 </head>
-<body>
+<body class="dark-class">
 
     <header class="topic">
         <div class="contact">
             <h2><strong>KleberDevion.contact</strong></h2>
+            <button class="mudar-fundo" onclick="mudarTema()"><span>tema</span></button>
         </div>
           <button class="open-modal" onclick="abrirModal()"><span>|||</span></button>
         <div id="modal">
            <h2>teste...</h2>
-           <button class="close-modal" onclick="fecharModal()">×</button>
+           <button class="close-modal" onclick="fecharModal()"><strong>×</strong></button>
         </div>
     </header>
 
@@ -32,7 +33,7 @@
         <label for="descricao"><strong>Sua menssagem</strong></label>
         <textarea type="description" name="descricao" required></textarea>
 
-        <button type="submit"><strong>Enviar menssagem</strong></button>
+        <button class="send-form" type="submit"><strong>Enviar menssagem</strong></button>
     </form> 
     <script>
         function abrirModal() {
@@ -40,6 +41,18 @@
         }
         function fecharModal() {
             document.getElementById('modal').style.display = "none"
+        }
+        
+        function mudarTema() {
+          // see if contains the class 'dark-class'
+          if (document.body.classList.contains('dark-class')) {
+            // Remove the class, and add outer class
+             document.body.classList.remove('dark-class');
+             document.body.classList.add('light-class');
+          }else{ // here repeat action
+             document.body.classList.remove('light-class');
+             document.body.classList.add('dark-class');
+          }
         }
   </script>
 </body>

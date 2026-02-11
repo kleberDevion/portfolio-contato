@@ -144,7 +144,63 @@ body {
     text-align: center;
 }
 
-.card-project {
+.card-project1 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    background-image: url('formproject.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card-project2 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    background-image: url('not-found.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card-project3 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    background-image: url('not-found.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card-project4 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    display: flex;
+    transform: translateY(30px);
+    background-image: url('not-found.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card-project5 {
     width: 300px;
     height: 200px;
     border: 1px solid whitesmoke;
