@@ -1,12 +1,9 @@
-import os
 import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-
-function main():
-// corpo do email de envio.
-   function bodyEmail():
-       doc.content = INDEX.HTML(HTML.BODY({
-            <!DOCTYPE html>
+def get_body_email():
+    html_content = """<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -24,13 +21,11 @@ function main():
 </head>
 <body>
     <table role="presentation" class="container" cellspacing="0" cellpadding="0" border="0">
-        <!-- Cabeçalho -->
         <tr>
             <td class="header">
                 <h1>Título do Seu E-mail</h1>
             </td>
         </tr>
-        <!-- Conteúdo -->
         <tr>
             <td class="content">
                 <h2>Olá, [Nome]!</h2>
@@ -38,13 +33,11 @@ function main():
                 <p>Você pode adicionar imagens, mudar as cores e ajustar o texto conforme sua necessidade.</p>
             </td>
         </tr>
-        <!-- Botão/CTA -->
         <tr>
             <td class="button-container">
                 <a href="https://seusite.com" class="button">Clique Aqui Agora</a>
             </td>
         </tr>
-        <!-- Rodapé -->
         <tr>
             <td class="footer">
                 <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
@@ -53,24 +46,37 @@ function main():
         </tr>
     </table>
 </body>
-</html>
+</html>"""
+    return html_content
 
-       }))
-   end
-// credencias para o envio do email.
-     function credentialsEmail():
-       remetente = "klebersantanadeoliveira07@gmail.com"
-       destinatario = "hoerkleysilva@gmail.com"
-       senha = "yssn ywxs mrtk fpzw"
-     end
-// pega os valores nas funcoes 'bodyEmail()' e da 'credentialsEmail()' para o pacote de envio do email.
-     function payloadEmail():
-       body = ( bodyEmail(), + credentialsEmail() )
-     end
-// configuracao do server SMTP.
-     function initSmptServer():
-       provide.sender({ 'smtp.gmail.com': 467 })
-       packege.loader(content = body(of - payloadEmail()))
-       response.json res.json({ status: 200, status: 404 })
-     end
-end
+def get_credentials():
+    return {
+        "remetente": "klebersantanadeoliveira07@gmail.com",
+        "destinatario": "kleberdevion@gmail.com",
+        "senha": "yssn ywxs mrtk fpzw"
+    }
+
+def send_email():
+    credentials = get_credentials()
+    html_body = get_body_email()
+    
+    msg = MIMEMultipart()
+    msg['From'] = credentials['remetente']
+    msg['To'] = credentials['destinatario']
+    msg['Subject'] = "Email Marketing"
+    
+    msg.attach(MIMEText(html_body, 'html'))
+    
+    try:
+        # O PoolScript mencionou porta 467, mas o padrão SSL do Gmail é 465
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(credentials['remetente'], credentials['senha'])
+        server.send_message(msg)
+        server.quit()
+        return {"status": 200, "message": "Email enviado com sucesso"}
+    except Exception as e:
+        return {"status": 404, "message": str(e)}
+
+if __name__ == "__main__":
+    result = send_email()
+    print(result)
